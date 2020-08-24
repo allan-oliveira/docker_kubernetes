@@ -33,8 +33,8 @@
                     _COUNT.Local,
                     _COUNT.Kernel,
                     _COUNT.TargetFramework,
-                    MensagemFixa = "Test",
-                    MensagemVariavel = _configuration["VariableMessage"]
+                    FixedMessage = "Test",
+                    VariableMessage = _configuration["VariableMessage"]
                 };
             }
         }

@@ -1,0 +1,22 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: apicountk8s 
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: apicountk8s
+  template:
+    metadata:
+      labels:
+        app: apicountk8s
+    spec:
+      containers:
+        - name: apicountk8s
+          image: allanrj/apicountk8s
+          env:
+            - name: VariableMessage
+              value: Using Azure Kubernetes Service (AKS)
+          ports:
+          - containerPort: 80
